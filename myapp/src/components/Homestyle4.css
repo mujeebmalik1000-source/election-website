@@ -1,0 +1,110 @@
+/* SECTION */
+.donation-section {
+  background: #e9e9e9;
+  padding: 40px;
+}
+
+/* GRID */
+.donation-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* CARD */
+.donation-card {
+  height: 500px;   /* 🔥 fixed height */
+  color: white;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  /* 🔥 important */
+  align-items: center;
+
+  padding: 60px 40px;
+}
+
+/* COLORS */
+.blue-card { background: #3b57c7; }
+.green-card { background: #20b89a; }
+.red-card { background: #e71d3c; }
+
+/* ICON CIRCLE */
+.icon-circle {
+  width: 120px;
+  height: 120px;
+  border: 2px dashed rgba(255,255,255,0.6);
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+}
+
+/* ICON */
+.icon-circle svg {
+  width: 32px;
+  height: 32px;
+  stroke: white;
+}
+
+/* BLUE MULTI ICON */
+.multi-icon {
+  position: relative;
+}
+
+.multi-icon svg {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+}
+
+.multi-icon svg:nth-child(1) {
+  bottom: 25px;
+  left: 25px;
+}
+.multi-icon svg:nth-child(2) {
+  top: 25px;
+  right: 25px;
+}
+.multi-icon svg:nth-child(3) {
+  top: 25px;
+  left: 25px;
+}
+.multi-icon svg:nth-child(4) {
+  bottom: 25px;
+  right: 25px;
+}
+
+/* TEXT */
+.donation-card h2 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.donation-card p {
+  font-size: 16px;
+  max-width: 280px;
+  line-height: 1.6;
+}
+
+/* BUTTON */
+.circle-btn {
+  width: 55px;
+  height: 55px;
+  background: #e5e5e5;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-btn svg {
+  width: 18px;
+  height: 18px;
+  color: red;
+}

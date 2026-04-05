@@ -1,0 +1,109 @@
+/* SECTION */
+.home-gallery-wrapper {
+  padding: 80px 0;
+  text-align: center;
+  background: radial-gradient(circle at top, #f9f9f9 0%, #faf9f9 50%);
+  font-family: sans-serif;
+}
+
+/* HEADER */
+.gallery-header {
+  margin-bottom: 50px;
+}
+
+.subtitle {
+  color: #ff4d6d;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.main-title {
+  color: #1a237e;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* CONTAINER */
+.gallery-container {
+  max-width: 1140px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+/* GRID */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* CARD */
+.image-card {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  cursor: pointer;
+  
+}
+
+/* IMAGE */
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+/* OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 223, 165, 0.6); /* green */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; 
+  transition: 0.7s ease;
+  transform: scale(0.9);
+  z-index: 1;
+}
+
+/* PLUS ICON */
+.plus-icon {
+  color: black;
+  font-size: 45px;
+  transform: scale(0);
+  transition: 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.image-card:hover img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.image-card:hover .overlay {
+  opacity: 1;
+}
+
+.image-card:hover .plus-icon {
+  transform: scale(1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-title {
+    font-size: 28px;
+  }
+}

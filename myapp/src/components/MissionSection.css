@@ -1,0 +1,229 @@
+/* ===== Section Background ===== */
+.mission-section {
+   padding: 100px 0;
+  background: #f6f7fb;   /* plain background */
+  position: relative;
+  overflow: hidden;
+}
+
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 30px;
+}
+
+.section-header::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 40px;
+  background: linear-gradient(
+    to right,
+    rgba(26,74,201,0.08),
+    rgba(229,57,53,0.08)
+  );
+  border-radius: 50px;
+  z-index: -1;
+}
+
+
+
+.container {
+  width: 1200px;
+  margin: auto;
+  position: relative;
+  z-index: 5;
+  display: flex;              
+  flex-direction: column;     
+  align-items: center;
+}
+
+
+
+.sub-title {
+  color: #e63946;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.section-header h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 20px;
+}
+
+/* ===== Grid ===== */
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* ===== Card ===== */
+.mission-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.mission-card img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  display: block;
+  transition: 0.4s ease;
+}
+
+/* Zoom Effect */
+.mission-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Blue Overlay */
+/* Overlay default (upar chhupa hua) */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(26, 74, 201, 0.95),
+    rgba(229, 57, 53, 0.95)
+  );
+
+  transform: translateY(-100%);   /* upar hidden */
+  transition: transform 0.7s ease;
+  z-index: 1;   /* 👈 Important */
+}
+
+.mission-card:hover .card-overlay {
+  transform: translateY(0);
+}
+
+/* Hover par exact left → right gradient */
+.mission-card:hover .card-overlay {
+  background: linear-gradient(
+    90deg,                /* LEFT to RIGHT */
+    rgba(26, 74, 201, 0.95) 0%,   /* blue */
+    rgba(229, 57, 53, 0.95) 100%  /* red */
+  );
+}
+
+
+
+/* White Label */
+
+.card-label {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  padding: 12px 30px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1d3557;
+  letter-spacing: 1px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.8s ease;   
+  white-space: nowrap; 
+  z-index: 3;   /* 👈 IMPORTANT */
+}
+
+/* Hover par white box + title left move */
+.mission-card:hover .card-label {
+  transform: translate(-50%, 120%);
+  opacity: 0;
+  /* left: -100%;
+  transform: translateX(-0); */
+}
+
+
+
+/* text styling */
+
+.overlay-content {
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  right: 30px;
+  transform: translateY(40px);
+  opacity: 0;
+  transition: transform 0.7s ease;
+  z-index: 2;
+}
+
+.overlay-content h3 {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+
+  
+}
+
+.overlay-content p {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.mission-card:hover .overlay-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+/* ===== Responsive ===== */
+@media (max-width: 1200px) {
+  .container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 992px) {
+  .mission-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header h2 {
+    font-size: 26px;
+  }
+}
+
+
+
+.mission-section {
+  position: relative;
+   overflow: visible;
+}
+
+.mission-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -60px;
+  width: 100%;
+  height: 60px;
+
+  background: linear-gradient(
+    to right,
+    rgba(255, 44, 85, 0.02) 0%,   /* start - very light */
+    rgba(255, 44, 85, 0.02) 50%,  /* 🔥 yaha tak pura light (aadhi line) */
+    #ff2c55 100%                  /* right side full red */
+  );
+}

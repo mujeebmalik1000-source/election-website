@@ -1,0 +1,40 @@
+.topHeader {
+  background: linear-gradient(to right, #020b2d, #04113f);
+  color: white;
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.topHeader-left {
+  display: flex;
+  gap: 25px;
+}
+
+.topHeader-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.topHeader-right span {
+  font-weight: 500;
+}
+
+.topHeader-right i {
+  color: white !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.topHeader-right i:hover {
+  color: #f72905 !important;
+  transform: scale(1.2);
+}
+
+
+
+
+

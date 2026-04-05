@@ -1,0 +1,88 @@
+.home3-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.home3-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 8%;
+  background: white;
+  border-radius: 5px;
+  /* margin: 20px; */
+}
+
+/* LOGO */
+.home3-logo {
+  font-size: 10px;
+  /* font-weight: bold; */
+ 
+}
+
+.home3-logo img {
+  width: 150px;
+  margin-left: -80px; 
+  
+}
+
+.logo-icon {
+  color: red;
+  margin-right: 5px;
+}
+
+.dot {
+  color: red;
+}
+
+/* NAV */
+.home3-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.home3-nav a {
+  text-decoration: none;
+  color: #0f0f0f;
+  font-weight: 1000;
+  transition: 0.3s;
+  font-size: 17px;
+  
+}
+
+.home3-nav a:hover {
+  color: #d6336c;
+}
+
+/* BUTTON */
+.home3-donate-btn {
+  margin-right: -78px;
+
+  padding: 14px 18px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  background: linear-gradient(135deg, #3b5bdb, #d6336c);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .home3-nav {
+    display: none;
+  }
+}
+
+
+.home3-header{
+  position: fixed;
+ position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000;
+}

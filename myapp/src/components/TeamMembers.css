@@ -1,0 +1,108 @@
+.staff-section{
+  padding:120px 0;
+  /* background: linear-gradient(90deg,#e8edf7,#f4e5e8); */
+  text-align:center;
+}
+
+.container{
+  width:1200px;
+  margin:auto;
+}
+
+.staff-header span{
+  color:#e11d48;
+  font-weight:600;
+  letter-spacing:2px;
+  font-size:14px;
+}
+
+.staff-header h2{
+  font-size:40px;
+  margin-top:10px;
+  color:#0a2540;
+}
+
+.staff-grid{
+  margin-top:70px;
+  display:flex;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.staff-card{
+  width:250px;
+  height:250px;
+  border-radius:50%;
+  background:#eaeaea;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+}
+
+.staff-img{
+  width:230px;
+  height:230px;
+  border-radius:50%;
+  overflow:hidden;
+  border:25px solid #fff;
+  position:relative; 
+}
+
+.staff-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.staff-card:hover .staff-img{
+  border:25px solid #f3b4c0;
+}
+
+
+
+
+.staff-overlay{
+  position:absolute;
+  bottom:-100%;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(225,29,72,0.85);
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  transition:0.4s;
+}
+
+.staff-card:hover .staff-overlay{
+  bottom:0;
+}
+
+/* Text style */
+.staff-overlay span{
+  font-size:14px;
+}
+
+.staff-overlay h3{
+  font-size:22px;
+  margin:6px 0;
+}
+
+
+/* Plus button */
+.plus{
+  width:45px;
+  height:45px;
+  border:1px solid #fff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  margin-top:10px;
+  cursor: pointer;
+}
