@@ -8,7 +8,7 @@ import Layout from "./components/Layouts/layout";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="election-website">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
